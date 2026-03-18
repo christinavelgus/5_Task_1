@@ -2,6 +2,8 @@ import asyncio
 import logging
 import os
 import re
+import sys
+from pathlib import Path
 
 from aiogram import Bot, Dispatcher, F, Router
 from aiogram.enums import ParseMode
