@@ -15,6 +15,11 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.types import CallbackQuery, Message
 from dotenv import load_dotenv
 
+# Ensure local imports (db.py, api.py, etc.) work regardless of working directory
+_THIS_DIR = Path(__file__).resolve().parent
+if str(_THIS_DIR) not in sys.path:
+    sys.path.insert(0, str(_THIS_DIR))
+
 import api
 import db
 from keyboards import catalog_inline_kb, main_menu_kb, sizes_inline_kb
